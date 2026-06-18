@@ -1,0 +1,399 @@
+<!-- AMN Group Company Website Demo
+
+Developer Notes:
+- Built with HTML, CSS and JavaScript. Includes Formspree API for contact form functionality
+- For performance, convert all images to .webp and lazy-load — large images are a major cause of slow Core Web Vitals scores, which directly affect Google rankings
+- Minify your CSS and JS files
+- Create a Google page where customers can leave reviews
+- Enhance privacy policy and analyze data analytics for insights and predictions
+- Implement AI to optimize website and deal with queries (AI chatbot)
+
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AMN Group is Ontario's premier collective of owner-operated trade specialists. We offer roofing, waterproofing, HVAC, electrical, plumbing, renovations, and property management across Toronto, Vaughan, Mississauga, Brampton, Richmond Hill, Barrie, and the GTA.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AMN Group | Renovation & Property Management Contractors in Toronto & GTA">
+    <meta property="og:description" content="Ontario's premier collective of owner-operated specialists. No subcontractors, no markup. Roofing, HVAC, electrical, plumbing, waterproofing, and full renovations across the GTA.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.amngroupinc.com/">
+    <meta property="og:image" content="https://www.amngroupinc.com/assets/logos/amn-logo.jpg">
+    <meta property="og:locale" content="en_CA">
+
+    <!-- LocalBusiness JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "AMN Group Inc",
+      "url": "https://www.amngroupinc.com",
+      "logo": "https://www.amngroupinc.com/assets/logos/amn-logo.jpg",
+      "image": "https://www.amngroupinc.com/assets/logos/amn-logo.jpg",
+      "telephone": "+1-647-640-5663",
+      "email": "info@amngroupinc.com",
+      "description": "Ontario's premier collective of owner-operated trade specialists offering roofing, waterproofing, HVAC, electrical, plumbing, interior renovations, landscaping, and property management.",
+      "areaServed": [
+        "Toronto", "Vaughan", "Mississauga", "Brampton", "Richmond Hill", "Barrie", "Greater Toronto Area"
+      ],
+      "serviceType": [
+        "Property Management",
+        "Flat Roofing",
+        "Foundation Waterproofing",
+        "Interior Renovations",
+        "Licensed Electrical",
+        "HVAC",
+        "Plumbing",
+        "Landscaping and Snow Removal",
+        "Painting and Exterior Upgrades",
+        "Tenant Relations"
+      ],
+      "priceRange": "$$",
+      "hasMap": "https://maps.google.com/?q=AMN+Group+Inc+Toronto+Ontario"
+    }
+    </script>
+
+    <title>AMN Group | Renovation & Property Management Contractors in Toronto & GTA</title>
+    <link rel="icon" type="image/png" href="/assets/logos/favicon.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <script src="/script.js" defer></script>
+</head>
+
+<body>
+    <div id="layout">
+        <nav class="nav-bar" aria-label="Main navigation">
+             <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="menu-overlay" onclick="toggleMenu()"></div>
+
+            <nav class="mobile-menu">
+
+                <ul>
+                    <li class="menu-section">SERVICES</li>
+                    <li><a href="#services">All Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+
+                    <li class="phone">
+                    <svg class="phone-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M3.654 1.328a.678.678 0 0 1 .737-.168l2.522 1.01c.329.132.515.487.45.832l-.547 2.73a.678.678 0 0 1-.58.53l-1.73.25a11.745 11.745 0 0 0 5.516 5.516l.25-1.73a.678.678 0 0 1 .53-.58l2.73-.547a.678.678 0 0 1 .832.45l1.01 2.522a.678.678 0 0 1-.168.737l-1.272 1.272c-.3.3-.745.417-1.16.31-2.49-.64-4.76-2.27-6.78-4.29C3.598 8.02 1.97 5.75 1.328 3.26c-.107-.415.01-.86.31-1.16L3.654 1.328z"/>
+                    </svg>
+                    <a href=tel:647-640-5663>647-640-5663</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="nav-left">
+                <img src="./assets/logos/amn-logo.jpg" alt="AMN logo" class="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <header class="hero">
+            <div class="hero-content">
+                <h1>MASTERY IN EVERY TRADE.</h1>
+                <p>Ontario's premier collective of owner-operated specialists serving both Commercial and Residential sectors.</p>
+                <a href="tel:647-640-5663" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 6px;">
+                    <path d="M3.654 1.328a.678.678 0 0 1 .737-.168l2.522 1.01c.329.132.515.487.45.832l-.547 2.73a.678.678 0 0 1-.58.53l-1.73.25a11.745 11.745 0 0 0 5.516 5.516l.25-1.73a.678.678 0 0 1 .53-.58l2.73-.547a.678.678 0 0 1 .832.45l1.01 2.522a.678.678 0 0 1-.168.737l-1.272 1.272c-.3.3-.745.417-1.16.31-2.49-.64-4.76-2.27-6.78-4.29C3.598 8.02 1.97 5.75 1.328 3.26c-.107-.415.01-.86.31-1.16L3.654 1.328z"/>
+                </svg>Get a Free Quote</a>
+            </div>
+        </header>
+
+    <section id="services" class="fade-in">
+        <h2 class="section-title">Our Specialist Services</h2>
+        <p class="section-subtitle">Owner-operated excellence with zero GC markup. Click a service below to view details.</p>
+        
+        <div class="services-grid">
+            <div class="service-card" onclick="this.classList.toggle('active')">
+                <div class="service-header"><h3>Property Management</h3><span class="chevron">▼</span></div>
+                <div class="service-content">
+                    <img src="./assets/services/pm.webp" alt="Commercial property management services Toronto by AMN Group" class="service-img" loading="lazy">
+                    <p>Comprehensive property oversight designed for long-term value. We handle everything from preventative maintenance and system inspections to daily operations management, ensuring your commercial property remains in peak condition under our expert care.</p>
+                </div>
+            </div>
+
+            <div class="service-card" onclick="this.classList.toggle('active')">
+                <div class="service-header"><h3>Flat Roofing Specialists</h3><span class="chevron">▼</span></div>
+                <div class="service-content">
+                    <img src="./assets/services/roof.webp" alt="Flat roof BUR installation Toronto and GTA by AMN Group" class="service-img" loading="lazy">
+                    <p>Mastery in high-durability flat roofing systems. We specialize in Commercial and Residential BUR (Built-Up Roofing) and Mod-Bit installations, engineered to withstand Ontario’s extreme climate.</p>
+                </div>
+            </div>
+
+            <div class="service-card" onclick="this.classList.toggle('active')">
+                <div class="service-header"><h3>Foundation Waterproofing</h3><span class="chevron">▼</span></div>
+                <div class="service-content">
+                    <img src="./assets/services/water.webp" alt="Foundation waterproofing and weeping tile installation Toronto by AMN Group" class="service-img" loading="lazy">
+                    <p>Protecting the structural integrity of your property from the ground up. We provide specialized exterior and interior waterproofing solutions, weeping tile installation, and foundational crack repairs to ensure a bone-dry foundation for both commercial and residential builds.</p>
+                </div>
+            </div>
+
+            <div class="service-card" onclick="this.classList.toggle('active')">
+                <div class="service-header"><h3>Interior Renovations & Design</h3><span class="chevron">▼</span></div>
+                <div class="service-content">
+                    <img src="./assets/services/reno.webp" alt="Kitchen and bathroom interior renovation Toronto by AMN Group" class="service-img" loading="lazy">
+                    <p><strong>Commercial & Residential Excellence:</strong> Full-scale interior transformations including luxury home kitchen/bath remodels and professional office build-outs. Every project includes a complimentary professional interior designer.</p>
+                </div>
+            </div>
+
+            <div class="service-card" onclick="this.classList.toggle('active')">
+                <div class="service-header"><h3>Licensed Electrical</h3><span class="chevron">▼</span></div>
+                <div class="service-content">
+                    <img src="./assets/services/elec.webp" alt="Licensed master electrician panel upgrade and wiring Toronto by AMN Group" class="service-img" loading="lazy">
+                    <p>Master electricians for panel upgrades, complex wiring for renovations, and 24/7 emergency response. Safe, efficient, and fully code-compliant work you can depend on.</p>
+                </div>
+            </div>
+
+            <div class="service-card" onclick="this.classList.toggle('active')">
+                <div class="service-header"><h3>HVAC</h3><span class="chevron">▼</span></div>
+                <div class="service-content">
+                    <img src="./assets/services/hvac.webp" alt="HVAC installation and maintenance Toronto commercial and residential by AMN Group" class="service-img" loading="lazy">
+                    <p>Full-spectrum heating, ventilation, and air conditioning solutions. We design, install, and maintain high-efficiency systems for large-scale commercial facilities and private residences.</p>
+                </div>
+            </div>
+
+            <div class="service-card" onclick="this.classList.toggle('active')">
+                <div class="service-header"><h3>Plumbing</h3><span class="chevron">▼</span></div>
+                <div class="service-content">
+                    <img src="./assets/services/plumb.webp" alt="Expert plumbing services drain repair and fixture installation Toronto by AMN Group" class="service-img" loading="lazy">
+                    <p>Expert plumbing infrastructure for new builds and existing properties. We handle fixture installations, drain maintenance, and emergency repairs for critical water systems.</p>
+                </div>
+            </div>
+
+            <div class="service-card" onclick="this.classList.toggle('active')">
+                <div class="service-header"><h3>Landscaping & Snow Removal</h3><span class="chevron">▼</span></div>
+                <div class="service-content">
+                    <img src="./assets/services/land.webp" alt="Landscaping stonework and commercial snow removal Toronto GTA by AMN Group" class="service-img" loading="lazy">
+                    <p>Custom stonework and professional landscape design. During winter, we provide priority commercial snow removal and de-icing to keep your property safe and accessible.</p>
+                </div>
+            </div>
+
+            <div class="service-card" onclick="this.classList.toggle('active')">
+                <div class="service-header"><h3>Painting & Exterior Upgrades</h3><span class="chevron">▼</span></div>
+                <div class="service-content">
+                    <img src="./assets/services/paint.webp" alt="Exterior painting and facade upgrades Toronto residential and commercial by AMN Group" class="service-img" loading="lazy">
+                    <p>High-durability coatings for residential refreshes and commercial facade transformations that significantly enhance curb appeal and property value.</p>
+                </div>
+            </div>
+
+            <div class="service-card" onclick="this.classList.toggle('active')">
+                <div class="service-header"><h3>Tenant Relations</h3><span class="chevron">▼</span></div>
+                <div class="service-content">
+                    <img src="./assets/services/tenant.webp" alt="Tenant relations and property communication management Toronto by AMN Group" class="service-img" loading="lazy">
+                    <p>A specialized, complimentary service to manage logistics and notifications during major projects, ensuring a friction-free experience for owners and occupants alike.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="fade-in">
+        <h2 class="section-title">About AMN Group</h2>
+        <div class="about-container">
+
+            <div class="about-image">
+                 <img src="assets/about.webp" alt="Completed home renovation project by AMN Group in Toronto GTA" loading="lazy">
+            </div>
+
+            <div class="about-content">
+
+                <div class="about-quote">
+                    “Strength in unity.”
+                </div>
+
+                <p>
+                    AMN Group Inc was born from a simple observation: the construction and property management industries were fractured. For years, we operated as independent business owners, each mastering a specific trade—from roofing and electrical to interior design and plumbing.
+                </p>
+
+                <p>
+                    We saw firsthand how clients struggled to coordinate between different companies, leading to delays, mismanaged schedules, and unnecessary costs. We unified our expertise into one streamlined operation.
+                </p>
+
+                <p>
+                    Today, our team works as a single coordinated unit—delivering efficient timelines, consistent quality, and full accountability across every phase of your renovation. We do what others don't, offering in-house maintenance, renovations, landscaping, and snow removal for seamless, cost-effective service. No subcontractors, no hassle. Just expert care for your property. Whether you need full management or a one-time service, we're always one call away for commercial and residential needs.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="fade-in">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Here are some of our frequently asked questions. Please click below to view answers.</p>
+            
+        <div class="faq-grid">
+            <div class="faq-card" onclick="this.classList.toggle('active')">
+                <div class="faq-header"><h3>1. What types of renovation services do you offer?</h3><span class="chevron">▼</span></div>
+                <div class="faq-content">
+                    <p> We provide a comprehensive range of home renovation services, including kitchen and bathroom remodels, basement finishing, flooring installation, painting, and full-home renovations. Each project is customized to meet the specific needs and preferences of our clients.</p>
+                </div>
+            </div>
+
+                <div class="faq-card" onclick="this.classList.toggle('active')">
+                    <div class="faq-header"><h3>2. Do you offer free estimates?</h3><span class="chevron">▼</span></div>
+                    <div class="faq-content">
+                        <p>Yes, we provide free, no-obligation estimates. We assess your project requirements and provide a detailed and transparent quote outlining scope, timeline, and costs.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card" onclick="this.classList.toggle('active')">
+                    <div class="faq-header"><h3>3. How long will my renovation take?</h3><span class="chevron">▼</span></div>
+                    <div class="faq-content">
+                        <p>Project timelines vary depending on the scope and complexity of the work. Smaller projects may take a few days to a few weeks, while larger renovations can take several weeks or more. We provide a clear timeline before starting and keep you informed throughout the process.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card" onclick="this.classList.toggle('active')">
+                    <div class="faq-header"><h3>4. Are you licensed and insured?</h3><span class="chevron">▼</span></div>
+                    <div class="faq-content">
+                        <p>Yes, our team is fully licensed and insured, ensuring that all work is completed safely, professionally, and in compliance with local regulations.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card" onclick="this.classList.toggle('active')">
+                    <div class="faq-header"><h3>5. Do you handle permits and inspections?</h3><span class="chevron">▼</span></div>
+                    <div class="faq-content">
+                        <p>We can manage the permit and inspection process on your behalf, ensuring all work meets building codes and regulatory requirements.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card" onclick="this.classList.toggle('active')">
+                    <div class="faq-header"><h3>6. What sets you apart from other contractors?</h3><span class="chevron">▼</span></div>
+                    <div class="faq-content">
+                        <p>At Amn Group Inc, we are your complete property partner, offering expert management and contracting services under one roof. Property owners can rely on us for comprehensive, hands-free management, while residential clients can hire us for any individual service. Our in-house team expertly handles everything from flat roofing, plumbing, HVAC, and electrical work to full renovations—including kitchen and bathroom makeovers with our interior design expertise. As well as painting, lawn care, and general maintenance. With Amn Group Inc, you get seamless quality and convenience, all from a single, trusted provider. Your property, perfected.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card" onclick="this.classList.toggle('active')">
+                    <div class="faq-header"><h3>7. How do you ensure quality in your work?</h3><span class="chevron">▼</span></div>
+                    <div class="faq-content">
+                        <p>We use skilled professionals, high-quality materials, and proven construction practices. Each project is carefully managed and inspected to ensure it meets our standards and your expectations.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card" onclick="this.classList.toggle('active')">
+                    <div class="faq-header"><h3>8. Can I make changes during the project?</h3><span class ="chevron">▼</span></div>
+                    <div class="faq-content">
+                        <p>Yes, changes can be accommodated where possible. We communicate any impact on cost or timeline before proceeding, so you can make informed decisions.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card" onclick="this.classList.toggle('active')">
+                    <div class="faq-header"><h3>9. How do payments work?</h3><span class="chevron">▼</span></div>
+                    <div class="faq-content">
+                        <p>Payment schedules are structured in stages, typically starting with a deposit followed by progress payments and a final payment upon completion. Full details are outlined in your project agreement.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card" onclick="this.classList.toggle('active')">
+                    <div class="faq-header"><h3>10. Will I be able to live in my home during the renovation?</h3><span class="chevron">▼</span></div>
+                    <div class="faq-content">
+                        <p>This depends on the scope of the project. For smaller renovations, it is often possible to remain in your home. For larger projects, we may recommend temporary arrangements for comfort and safety.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card" onclick="this.classList.toggle('active')">
+                    <div class="faq-header"><h3>11. What is the Tenant Relations service?</h3><span class="chevron">▼</span></div>
+                    <div class="faq-content">
+                        <p>Our Tenant Relations service ensures smooth communication and coordination between tenants and property managers during construction projects.</p>
+                    </div>
+                </div>
+
+                <div class="faq-card" onclick="this.classList.toggle('active')">
+                    <div class="faq-header"><h3>12. How do I get started?</h3><span class="chevron">▼</span></div>
+                    <div class="faq-content">
+                        <p>You can get started by contacting us to discuss your project. We will schedule a consultation, assess your needs, and provide a detailed estimate to move forward.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    <div id="contact" class="fade-in">
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-subtitle">Hire AMN Group for your next project.</p>
+
+    <div class="contact-info">
+
+            <a href="tel:6476405663" class="contact-button">
+                <svg class="icon" viewBox="0 0 24 24">
+                    <path d="M6.6 10.8c1.4 2.7 3.9 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V21c0 .6-.4 1-1 1C10.1 22 2 13.9 2 3c0-.6.4-1 1-1h4.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1l-2.2 2.9z"/>
+                </svg>
+                647-640-5663
+            </a>
+
+            <a href="mailto:info@amngroupinc.com" class="contact-button">
+                <svg class="icon" viewBox="0 0 24 24">
+                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                    <path d="M2 6l10 7 10-7"/>
+                </svg>
+                info@amngroupinc.com
+            </a>
+
+        </div>
+
+        <div class="form">
+        <form id="contact-form" action="https://formspree.io/f/xvzlgknb" method="POST">
+
+            <input type="hidden" name="_subject" value="New Contact Form Submission">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="#contact">
+
+            <input type="text" name="name" id="name" placeholder="Name*" required minlength="2">
+
+            <input type="tel" name="phone" id="phone" placeholder="Phone Number*" required
+                pattern="^\+?[0-9\s\-()]{7,15}$">
+
+            <input type="email" name="email" id="email" placeholder="Email*" required>
+
+            <textarea name="message" id="message" placeholder="Tell Us About Your Project*" required></textarea>
+
+            <button type="submit" id="contact-button">Get a Free Quote</button>
+
+        </form>
+        </div>
+
+    <footer>
+        <div class="footer-content">
+            <p class="footer-subtitle">Serving Ontario</p>
+
+            <div class="footer-cities">
+                <span class="city-tag">Toronto</span>
+                <span class="divider">|</span>
+                <span class="city-tag">Vaughan</span>
+                <span class="divider">|</span>
+                <span class="city-tag">Mississauga</span>
+                <span class="divider">|</span>
+                <span class="city-tag">Brampton</span>
+                <span class="divider">|</span>
+                <span class="city-tag">Richmond Hill</span>
+                <span class="divider">|</span>
+                <span class="city-tag">Barrie</span>
+                <span class="divider">|</span>
+                <span class="city-tag">GTA</span>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span class="copyright">
+                &copy; Copyright 2026 - AMN Group |
+                <a href="privacy-policy.html">Privacy Policy</a>
+            </span>
+        </div>
+    </footer>
+
+</body>
+</html>
